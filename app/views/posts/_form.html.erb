@@ -1,0 +1,5 @@
+    <%= form_with(model: post, local: true) do |f| %>
+      <%= f.text_field :city, placeholder: "都道府県" %>
+      <%= f.text_field :explain, placeholder: "情報" %>
+      <%= f.submit "SEND" %>
+    <% end %>
