@@ -1,0 +1,15 @@
+<%= form_with(model: post, local: true) do |f|%>
+  <div class="field">
+    <%= f.label :city, "都道府県" %><br />
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :explain, "説明" %><br />
+    <%= f.text_area :explain, class: :form__text %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "投稿する", class: :form__btn  %>
+  </div>
+<% end %>
