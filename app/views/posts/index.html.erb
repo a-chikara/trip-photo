@@ -3,7 +3,15 @@
     <h1>TripPhoto</h1>
     <h1>キーワード検索</h1>
   </div>
+
   <div class="main">
     <%= link_to "新規投稿", new_post_path, method: :get %>
+    <h1>投稿内容</h1>
+    <div class="post_info">
+      <% @posts.each do |post| %>
+        <p><%= post.city %></p>
+      <% end %>
+    </div>
+    
   </div>
 </div>
