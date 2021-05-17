@@ -11,6 +11,7 @@
       <% @posts.each do |post| %>
         <p><%= post.city %></p>
       <% end %>
+      <%= image_tag post.image, class: "post_image" if post.image.attached? %>
     </div>
     
   </div>
