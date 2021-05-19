@@ -10,8 +10,11 @@
     <div class="post_info">
       <% @posts.each do |post| %>
         <p><%= post.city %></p>
+
+        <%= link_to image_tag(post.image, class: :post_image), "#" %>
+
       <% end %>
     </div>
-    
   </div>
 </div>
+

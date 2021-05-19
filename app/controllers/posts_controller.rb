@@ -19,8 +19,8 @@ class PostsController < ApplicationController
 
   private
 
-    def post_params
-      params.require(:post).permit(:city, :explain)
-    end
+  def post_params
+    params.require(:post).permit(:city, :explain, :image)
+  end
   
 end
