@@ -1,7 +1,15 @@
 <%= form_with(model: post, local: true) do |f|%>
+
   <div class="field">
     <%= f.label :city, "都道府県" %><br />
     <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "画像" %><br />
+    <div class="image_field">
+      <%= f.file_field :image, class:"image_file_field", id:"trip_photo_image" %>
+    </div>
   </div>
 
   <div class="field">
