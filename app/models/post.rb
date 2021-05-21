@@ -6,4 +6,9 @@ class Post < ApplicationRecord
     validates :city
     validates :explain
   end
+
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :city
+
 end

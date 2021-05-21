@@ -4,4 +4,11 @@ class City < ActiveHash::Base
     { id: 2, name: '北海道' },
     { id: 3, name: '青森' },
   ]
+
+
+
+  include ActiveHash::Associations
+  has_many :posts
+
+
   end
