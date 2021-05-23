@@ -12,7 +12,8 @@
         <p><%= post.city.name %></p>
 
         <%= link_to image_tag(post.image, class: :post_image), "#" %>
-
+        
+        <%= link_to '削除', post_path(post.id), method: :delete %>
       <% end %>
     </div>
   </div>
