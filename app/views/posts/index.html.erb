@@ -10,7 +10,7 @@
     <div class="post_info">
       <% @posts.each do |post| %>
         <p><%= post.city.name %></p>
-
+        <%= l post.created_at %>
         <%= link_to image_tag(post.image, class: :post_image), "#" %>
 
         <p><%= post.explain %></p>
