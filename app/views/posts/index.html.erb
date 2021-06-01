@@ -5,6 +5,7 @@
   </div>
 
   <div class="main">
+    <%= link_to current_user.name, edit_user_path(current_user) %>
     <%= link_to "新規投稿", new_post_path, method: :get %>
     <h1>投稿内容</h1>
     <div class="post_info">
