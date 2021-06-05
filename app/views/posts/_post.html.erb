@@ -1,16 +1,11 @@
-  <div class="main">
-    <%= link_to current_user.name, edit_user_path(current_user) %>
-    <%= link_to "新規投稿", new_post_path, method: :get %>
-    <h1>投稿内容</h1>
-    <div class="post_info">
-      <% @posts.each do |post| %>
-        <p><%= post.city.name %></p>
-        <%= l post.created_at %>
-        <%= link_to image_tag(post.image.variant(resize: '500x500'), class: :post_image), "#" %>
+<div class="post_info">
+  <% @posts.each do |post| %>
+    <p><%= post.city.name %></p>
+    <%= l post.created_at %>
+    <%= link_to image_tag(post.image.variant(resize: '500x500'), class: :post_image), "#" %>
 
-        <p><%= post.explain %></p>
+    <p><%= post.explain %></p>
         
-        <%= link_to '削除', post_path(post.id), method: :delete %>
-      <% end %>
-    </div>
-  </div>
+    <%= link_to '削除', post_path(post.id), method: :delete %>
+  <% end %>
+</div>
