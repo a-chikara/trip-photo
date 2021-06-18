@@ -11,4 +11,13 @@ class Post < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :city
 
+
+  # def self.search(search)
+  #   if search != ""
+  #     # SQLの文法がおかしいみたい。（whereの使い方、文法）
+  #     Post.where('explain like ?', "%#{search}%")
+  #   else
+  #     Post.all
+  #   end
+  # end
 end

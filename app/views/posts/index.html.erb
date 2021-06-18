@@ -2,23 +2,18 @@
   <div class="header">
     <h1>TripPhoto</h1>
     <h1>キーワード検索</h1>
+    <%# 検索機能に関する記述 %>
+    <%# <%= form_with(url: search_posts_path, local: true, method: :get, class: "search_form") do |form| %>
+      <%# <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+      <%# <%= form.submit "検索", class: "search-btn" %>
+    <%# <% end %>
+    <%# /検索機能に関する記述/ %>
   </div>
-
   <div class="main">
     <%= link_to current_user.name, edit_user_path(current_user) %>
     <%= link_to "新規投稿", new_post_path, method: :get %>
     <h1>投稿内容</h1>
-    <div class="post_info">
-      <% @posts.each do |post| %>
-        <p><%= post.city.name %></p>
-        <%= l post.created_at %>
-        <%= link_to image_tag(post.image.variant(resize: '500x500'), class: :post_image), "#" %>
-
-        <p><%= post.explain %></p>
-        
-        <%= link_to '削除', post_path(post.id), method: :delete %>
-      <% end %>
-    </div>
+    <%= render partial: "post", locals: { post: @posts } %>
   </div>
 </div>
 
