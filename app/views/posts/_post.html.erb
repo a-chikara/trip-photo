@@ -1,11 +1,15 @@
 <div class="post_info">
   <% @posts.each do |post| %>
-    <p><%= post.city.name %></p>
-    <%= l post.created_at %>
+    <div class="post_city_name">
+      <p><%= post.city.name %></p>
+    </div>
+    <div class="post_created_at">
+      <%= l post.created_at %>
+    </div>
     <%= link_to image_tag(post.image.variant(resize: '500x500'), class: :post_image), "#" %>
-
-    <p><%= post.explain %></p>
-        
+    <div class="post_explain">
+      <p><%= post.explain %></p>
+    </div>
     <%= link_to '削除', post_path(post.id), method: :delete %>
   <% end %>
 </div>
