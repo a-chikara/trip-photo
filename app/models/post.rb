@@ -12,11 +12,12 @@ class Post < ApplicationRecord
   belongs_to :city
 
 
-  def self.search(search)
-    if search != ""
-      Post.where('text LIKE(?)', "%#{search}%")
-    else
-      Post.all
-    end
-  end
+  # def self.search(search)
+  #   if search != ""
+  #     # SQLの文法がおかしいみたい。（whereの使い方、文法）
+  #     Post.where('explain like ?', "%#{search}%")
+  #   else
+  #     Post.all
+  #   end
+  # end
 end
