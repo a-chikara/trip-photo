@@ -17,3 +17,12 @@
  * {
   box-sizing: border-box;
 }
+
+body {
+  background: linear-gradient(-135deg, #7ff7ed, #e8f7de) fixed;
+}
+
+/* div {
+  margin: 120px 0;
+  text-align: center;
+} */
