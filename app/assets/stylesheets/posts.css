@@ -1,3 +1,4 @@
+/* 一覧ページ */
 .wrapper {
   width: 100%;
 }
@@ -17,4 +18,14 @@ h1 {
 .main {
   height: calc(100vh - 80px);
   overflow: scroll;
+}
+
+
+
+
+
+/* 新規投稿ページ */
+.post_form {
+  height: 100vh;
+  font-size: 30px;
 }
