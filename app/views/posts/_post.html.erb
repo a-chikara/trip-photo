@@ -10,6 +10,8 @@
     <div class="post_explain">
       <p><%= post.explain %></p>
     </div>
-    <%= link_to '削除', post_path(post.id), method: :delete %>
+    <div class="post_delete">
+      <%= link_to '削除', post_path(post.id), method: :delete %>
+    </div>
   <% end %>
 </div>

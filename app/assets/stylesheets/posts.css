@@ -20,6 +20,12 @@ h1 {
   overflow: scroll;
 }
 
+/* _postテンプレート */
+.post_delete {
+  margin-bottom: 40px;
+}
+
+
 
 
 
@@ -28,4 +34,7 @@ h1 {
 .post_form {
   height: 100vh;
   font-size: 30px;
+  padding-top: 20px;
+  display: flex;
 }
+
