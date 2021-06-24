@@ -21,6 +21,11 @@ h1 {
 }
 
 /* _postテンプレート */
+.post_info {
+  text-align: center;
+}
+
+
 .post_delete {
   margin-bottom: 40px;
 }
