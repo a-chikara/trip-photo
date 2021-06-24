@@ -1,19 +1,29 @@
 <div class="post_info">
   <% @posts.each do |post| %>
-    <div class="post_city_name">
-      <a><%= post.city.name %></a>
+    <div class="post_city">
+      <a class="post_city_name">
+        <%= post.city.name %>
+      </a>
     </div>
-    <div class="post_image">
+
+    <div class="post_image_area">
       <%= link_to image_tag(post.image.variant(resize: '500x500'), class: :post_image), "#" %>
     </div>
-    <div class="post_created_at">
-      <a><%= l post.created_at %></a>
+
+    <div class="post_created_at_area">
+      <a class="post_created__at">
+        <%= l post.created_at %>
+      </a>
     </div>
-    <div class="post_explain">
-      <a><%= post.explain %></a>
+
+    <div class="post_explain_area">
+      <a class="post_explain">
+        <%= post.explain %>
+      </a>
     </div>
-    <div class="post_delete">
-      <%= link_to '削除', post_path(post.id), method: :delete %>
+
+    <div class="post_delete_area">
+      <%= link_to '削除', post_path(post.id), method: :delete, class: :post_delete %>
     </div>
   <% end %>
 </div>
