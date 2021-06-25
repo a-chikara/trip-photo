@@ -6,6 +6,13 @@
       </a>
     </div>
 
+    <div class="post_explain_area">
+      <a class="post_explain">
+        <%= post.explain %>
+      </a>
+    </div>
+
+
     <div class="post_image_area">
       <%= link_to image_tag(post.image.variant(resize: '500x500'), class: :post_image), "#" %>
     </div>
@@ -16,11 +23,6 @@
       </a>
     </div>
 
-    <div class="post_explain_area">
-      <a class="post_explain">
-        <%= post.explain %>
-      </a>
-    </div>
 
     <div class="post_delete_area">
       <%= link_to '削除', post_path(post.id), method: :delete, class: :post_delete %>
