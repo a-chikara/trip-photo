@@ -1,7 +1,17 @@
 <div class="wrapper">
   <div class="header">
-    <h1>TripPhoto</h1>
-    <h1>キーワード検索</h1>
+    <h1 class="app_title">TripPhoto</h1>
+    <div class="page_btn">
+      <div class="current_user_name">
+        <%= link_to current_user.name, edit_user_path(current_user) %>
+      </div>
+      <div class="new_post_btn">
+        <%= link_to "新規投稿", new_post_path, method: :get %>
+      </div>
+    </div>
+
+
+    
     <%# 検索機能に関する記述 %>
     <%# <%= form_with(url: search_posts_path, local: true, method: :get, class: "search_form") do |form| %>
       <%# <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
@@ -9,10 +19,8 @@
     <%# <% end %>
     <%# /検索機能に関する記述/ %>
   </div>
+
   <div class="main">
-    <%= link_to current_user.name, edit_user_path(current_user) %>
-    <%= link_to "新規投稿", new_post_path, method: :get %>
-    <h1>投稿内容</h1>
     <%= render partial: "post", locals: { post: @posts } %>
   </div>
 </div>
