@@ -5,14 +5,26 @@
 
 .header {
   display: flex;
-  justify-content: space-around;
   height: 80px;
+  width: 100vw;
+  justify-content: space-around;
 }
 
-h1 {
+
+.app_title {
   font-size: 40px;
-  padding-top: 10px;
   color: #fff;
+}
+
+.page_btn {
+
+}
+
+.current_user_name {
+
+}
+
+.new_post_btn {
 }
 
 .main {

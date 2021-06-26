@@ -1,11 +1,13 @@
 <div class="wrapper">
   <div class="header">
-    <h1>TripPhoto</h1>
-    <div class="current_user_name">
-      <%= link_to current_user.name, edit_user_path(current_user) %>
-    </div>
-    <div class="new_post_btn">
-      <%= link_to "新規投稿", new_post_path, method: :get %>
+    <h1 class="app_title">TripPhoto</h1>
+    <div class="page_btn">
+      <div class="current_user_name">
+        <%= link_to current_user.name, edit_user_path(current_user) %>
+      </div>
+      <div class="new_post_btn">
+        <%= link_to "新規投稿", new_post_path, method: :get %>
+      </div>
     </div>
 
 
@@ -19,7 +21,6 @@
   </div>
 
   <div class="main">
-    <h1>投稿内容</h1>
     <%= render partial: "post", locals: { post: @posts } %>
   </div>
 </div>
