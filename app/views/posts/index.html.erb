@@ -9,9 +9,20 @@
         <%= link_to "新規投稿", new_post_path, method: :get %>
       </div>
     </div>
+    <%# メニューバー %>
+    <p id="menu">menu</p>
+    <nav id="nav" class="navi">
+      <ul>
+        <li><a href="#">メニュー１</a></li>
+        <li><a href="#">メニュー２</a></li>
+        <li><a href="#">メニュー３</a></li>
+      </ul>    
+    </nav>
+    <div id="back" class="menu-background"></div>
 
 
-    
+
+
     <%# 検索機能に関する記述 %>
     <%# <%= form_with(url: search_posts_path, local: true, method: :get, class: "search_form") do |form| %>
       <%# <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
