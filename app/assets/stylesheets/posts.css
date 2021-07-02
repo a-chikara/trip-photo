@@ -7,13 +7,25 @@
   display: flex;
   height: 80px;
   width: 100vw;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  background-color:coral;
 }
+
+.header p {
+  margin-left: auto;
+  cursor: pointer;
+  line-height: 46px;
+  padding-right: 20px;
+  z-index: 150;
+}
+
+
 
 
 .app_title {
   font-size: 40px;
   color: #fff;
+  padding-left: 20px;
 }
 
 .page_btn {
