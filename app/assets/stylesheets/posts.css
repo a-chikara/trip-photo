@@ -62,18 +62,16 @@ a {
   transition: .4s transform;
 }
 
-.contents {
-  height: 1000px;
-  background-color: #ddd;
-}
 
 .nav-btn {
   display: none;
   outline: none;
 }
 
+
+/* ドロワーメニュー出現後 */
 .menu {
-  ul {
+  ul {}
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -116,6 +114,7 @@ a {
     background: transparent;
     border: none;
   }
+  /* ドロワーメニュー出現後 */
 
   /* //ハンバーガーボタン */
   .hamburger {
